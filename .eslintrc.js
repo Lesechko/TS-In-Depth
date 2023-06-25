@@ -1,30 +1,33 @@
 module.exports = {
     env: {
-        browser: true
+        browser: true,
     },
     parser: '@typescript-eslint/parser',
     parserOptions: {
-        sourceType: 'module'
+        sourceType: 'module',
     },
     plugins: ['@typescript-eslint'],
     rules: {
-        '@typescript-eslint/naming-convention': ['error', {
-            selector: 'class',
-            format: ['PascalCase'],
-        }],
+        '@typescript-eslint/naming-convention': [
+            'error',
+            {
+                selector: 'class',
+                format: ['PascalCase'],
+            },
+        ],
         '@typescript-eslint/indent': 'error',
         '@typescript-eslint/member-delimiter-style': [
             'error',
             {
                 multiline: {
                     delimiter: 'semi',
-                    requireLast: true
+                    requireLast: true,
                 },
                 singleline: {
                     delimiter: 'semi',
-                    requireLast: false
-                }
-            }
+                    requireLast: false,
+                },
+            },
         ],
         '@typescript-eslint/prefer-namespace-keyword': 'error',
         '@typescript-eslint/quotes': ['error', 'single'],
@@ -43,15 +46,15 @@ module.exports = {
             'Boolean',
             'boolean',
             'Undefined',
-            'undefined'
+            'undefined',
         ],
         'id-match': 'error',
         'no-eval': 'error',
-        'no-redeclare': 'error',
+        // 'no-redeclare': 'error',
         'no-trailing-spaces': 'error',
-        'no-underscore-dangle': 'error',
+        // 'no-underscore-dangle': 'error',
         'no-unsafe-finally': 'error',
         'no-var': 'error',
         'spaced-comment': ['error', 'always', { markers: ['/'] }],
-    }
+    },
 };

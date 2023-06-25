@@ -17,7 +17,7 @@ module.exports = {
     // devserver
     devServer: {
         static: {
-            directory: path.resolve(__dirname, 'dist')
+            directory: path.resolve(__dirname, 'dist'),
         },
         open: true,
         hot: true,
@@ -53,9 +53,13 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'TypeScript In-Depth',
             template: 'index.html',
-        })
+        }),
     ],
 
     // switch on source-map as a separate file: bundle.js.map
     devtool: 'source-map',
+
+    experiments: {
+        topLevelAwait: true,
+    },
 };
